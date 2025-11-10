@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+@font-face {
+    font-family: 'Body';
+    src: url('./font/Inter-VariableFont.ttf') format('truetype');
+    font-weight: 100 900;
+    /* Plage de poids pour le font variable */
+    font-style: normal;
+}
+
+body{
+    background-color: #051436;
+    font-family: "Body";
+}
+
+.main{
+    margin: 0 auto;
+    padding-top: 3%;
+    padding-bottom: 10%;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    overflow: clip;
+}
+
+.image{
+    width: 60%;
+
+    @media screen and (max-width: 1353px) {
+        width: 90%;
+    }
+}
+
+/* Navbar */
+.Navbar{
+    position: fixed;
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    max-width: fit-content;
+    padding: 10px 14px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 2%;
+    
+    background: rgba(0, 0, 0, 0.26);
+    border: 1px solid rgba(237, 243, 255, 0.30);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+}
+.Navbar img{
+    position: absolute;
+    right: 100px;
+    top: -19px;
+}
+
+.Navbar .Container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.Container p{
+    color: #EDF3FF;
+    font-size: 1rem;
+    text-align: center;
+    width: 300px;
+}
+
+.Container .Menus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    width: 100%;
+}
+
+.Button{
+    display: flex;
+    align-items: center;
+
+    padding: 12px 20px;
+    background: #EDF3FF;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #051436;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.Inactive{
+    background: rgba(237, 243, 255, 0.10);
+    color: #EDF3FF;
+    font-weight: 400;
+
+    &:hover{
+        background: rgba(237, 243, 255, 0.30);
+    }
+}
+/* Mwendo */
+#MainStep{
+    display: flex ;
+}
+
+
+/* ------------------------------------------- */
+/* Queries */
+@media screen and (max-width: 720px) {
+    .main{
+        padding-bottom: 50%;
+    }
+    .Navbar img{
+        right: 92px;
+    }
+
+    .Container p{
+        font-size: 12px;
+        width: 232px;
+    }
+
+    .Button{
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 496px){
+    .Navbar{
+        max-width: 72%;
+    }
+    .Navbar img{
+        right: 12px;
+    }
+    .Container p{
+        font-size: 12px;
+        width: 232px;
+    }
+    .Container .Menus{
+        gap: 10px;
+    }
+    .Button{
+        padding: 10px 24px;
+    }
+}
+@media screen and (max-width: 320px){
+    .Navbar img{
+        right: 16px;
+    }
+    .Container p{
+        font-size: 10px;
+        width: 188px;
+    }
+    .Button{
+        padding: 10px 17px;
+    }
+}
+
